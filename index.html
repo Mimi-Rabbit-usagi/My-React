@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="container"></div>
@@ -17,7 +18,17 @@
       {
         const container = document.querySelector("#container");
         const root = ReactDOM.createRoot(container);
-        root.render(React.createElement("h1", null, "メニュー"));
+        root.render(
+          <>
+            <h1>メニュー</h1>
+            <ul>
+              <li>牛丼</li>
+              <li>カレー</li>
+              <li>サラダ</li>
+            </ul>
+            <p>合計：0円</p>
+          </>
+        );
       }
     </script>
   </body>
